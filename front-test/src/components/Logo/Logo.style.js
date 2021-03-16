@@ -4,7 +4,8 @@ export const LogoText = styled.span`
     font-family: 'Open Sans', sans-serif;
     color: #423D59;
     font-size: 24px;
-    font-weight: 700;    
+    font-weight: 700;
+    padding: 5px 0;
 `;
 
 export const LogoO = styled.span`
