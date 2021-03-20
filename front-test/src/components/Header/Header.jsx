@@ -3,7 +3,7 @@ import {TopHeader, HeaderWrapper} from './Header.style';
 import Logo from '../Logo/Logo';
 import Menu from '../Menu/Menu';
 
-function Header() {
+export default function Header() {
     return (
         <TopHeader>
             <HeaderWrapper>
@@ -13,5 +13,3 @@ function Header() {
         </TopHeader>
     )
 }
-
-export default Header;

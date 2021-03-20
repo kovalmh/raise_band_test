@@ -3,7 +3,7 @@ import burger from '../../assets/icons/burger.svg';
 import burgerActive from '../../assets/icons/burger-active.svg';
 import {Image} from './Burger.style';
 
-function Burger() {
+export default function Burger() {
     const [clicked, setClicked] = useState(false);
     const toggleMenu = () => {
         setClicked(!clicked);
@@ -13,5 +13,3 @@ function Burger() {
         <Image src={clicked ? burgerActive : burger} onClick={toggleMenu} />
     )
 }
-
-export default Burger;
