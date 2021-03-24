@@ -1,0 +1,26 @@
+Index: front-test/src/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport Header from './components/Header/Header'\r\n\r\nfunction App() {\r\n  return (\r\n    <div className=\"App\">\r\n      <Header />\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default App;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/front-test/src/App.js b/front-test/src/App.js
+--- a/front-test/src/App.js	(revision d70dd94ff0a6cc374bac1d5c2878bf881b4d1215)
++++ b/front-test/src/App.js	(date 1616264126471)
+@@ -1,12 +1,10 @@
+ import React from 'react';
+ import Header from './components/Header/Header'
+ 
+-function App() {
++export default function App() {
+   return (
+     <div className="App">
+       <Header />
+     </div>
+   );
+-}
+-
+-export default App;
++}
+\ No newline at end of file
