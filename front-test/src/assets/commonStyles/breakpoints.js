@@ -16,4 +16,4 @@ const size = {
     xxl: `(min-width: ${size.xxl})`
    }
    
-   export default {size, device}
+export default {size, device}

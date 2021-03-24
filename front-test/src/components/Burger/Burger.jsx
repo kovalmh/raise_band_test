@@ -1,15 +1,16 @@
-import React, {useState} from 'react';
+import React from 'react';
 import burger from '../../assets/icons/burger.svg';
 import burgerActive from '../../assets/icons/burger-active.svg';
-import {Image} from './Burger.style';
+import { Image } from './Burger.style';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleMenu, selectBurgerIcon } from './burgerSlice';
 
 export default function Burger() {
-    const [clicked, setClicked] = useState(false);
-    const toggleMenu = () => {
-        setClicked(!clicked);
-    }
+    const mobileMenu = useSelector(selectBurgerIcon);
+    const dispatch = useDispatch();
 
     return (
-        <Image src={clicked ? burgerActive : burger} onClick={toggleMenu} />
+        <Image src={mobileMenu ? burgerActive : burger}
+               onClick={() => dispatch(toggleMenu())} />
     )
 }
