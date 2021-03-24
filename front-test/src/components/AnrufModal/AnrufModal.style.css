@@ -1,0 +1,262 @@
+.Modal {
+    position: absolute;
+    background: #fff;
+    display: flex;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    padding: 0;
+    overflow: visible;
+    max-width: 53vw;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .75)
+}
+
+.ModalImage {
+    margin: -0.781vw 0 -0.781vw -0.260vw;
+}
+
+.ModalInfo {
+    margin: 0 2.083vw 0 3.125vw
+}
+
+.ModalHeader {
+    display: inline-block;
+    font-weight: 700;
+    line-height: 180%;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ModalText {
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+
+.ModalForm input:last-of-type {
+    margin-top: 9px;
+}
+
+.ModalInput {
+    border-radius: 10px;
+    width: 100%;
+    border: solid 1px #cfcece;
+    outline: none;
+}
+
+.ModalButton {
+    border-radius: 10px;
+    background: #C774EE;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.ModalClose {
+    position: absolute;
+    opacity: .2;
+}
+
+.ModalClose:hover {
+    opacity: 1;
+}
+
+.ModalClose::before, .ModalClose::after {
+    position: absolute;
+    content: ' ';
+    width: 0.052vw;
+    background-color: #333;
+}
+
+.ModalClose:before {
+     transform: rotate(45deg);
+ }
+
+.ModalClose:after {
+     transform: rotate(-45deg);
+ }
+
+@media only screen and (min-width: 320px) {
+    .ModalClose::before, .ModalClose::after {
+        height: 3vh;
+    }
+    .Modal {
+        max-width: 85%;
+    }
+    .ModalImage {
+        max-width: 40%;
+    }
+    .ModalForm {
+        margin-top: 4.8vh
+    }
+    .ModalHeader {
+        font-size: 4vw;
+        line-height: 3vh;
+        margin-top: 4.7vh;
+    }
+    .ModalText {
+        width: 95%;
+        margin-top: 2.8vh;
+        font-size: 3vw;
+    }
+    .ModalInput {
+        padding: 1.5vh 0 1.5vh 1.5vh;
+        width: 85%;
+        font-size: 3.5vw;
+    }
+    .ModalButton {
+        width: 75%;
+        margin: 2vh 0 4.4vh;
+        font-size: 3.5vw;
+        padding: 1.7vh 1.15vw;
+    }
+    .ModalClose {
+        top: 2.3vh;
+        right: 3vw;
+        width: 2.7vw;
+        height: 1.7vw
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .ModalHeader {
+        margin-top: 5.7vh;
+    }
+    .ModalText {
+        font-size: 3vw;
+    }
+    .ModalInput {
+        padding: 1.5vh 0 1.5vh 1.5vh;
+    }
+    .ModalInput::placeholder {
+        line-height: 4.5vh;
+        font-size: 3vw;
+    }
+    .ModalButton {
+        width: 65%;
+        font-size: 3vw;
+        padding: 2vh 1.5vw;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ModalClose::before, .ModalClose::after {
+        height: 3.5vh;
+    }
+    .ModalHeader {
+        margin-top: 8vh;
+        font-size: 3.5vw;
+    }
+    .ModalText {
+        margin-top: 5vh;
+        font-size: 2.4vw;
+    }
+    .ModalInput {
+        padding: 1vh 0 1vh 1.5vh;
+    }
+    .ModalInput::placeholder {
+        line-height: 5vh;
+        font-size: 2.5vw;
+    }
+    .ModalButton {
+        width: 55%;
+        font-size: 2vw;
+        padding: 2vh 1.8vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .ModalClose::before, .ModalClose::after {
+        height: 32px;
+        left: 3vw;
+    }
+    .ModalHeader {
+        margin-top: 12vh;
+        font-size: 3vw;
+    }
+    .ModalForm {
+        width: 65%;
+        margin-top: 41px;
+    }
+    .ModalText {
+        margin-top: 5vh;
+        font-size: 2vw;
+        line-height: 4.5vh
+    }
+    .ModalInput {
+        padding: .5vh 0 .5vh 1vh;
+    }
+    .ModalInput::placeholder {
+        line-height: 5vh;
+        font-size: 2vw;
+    }
+    .ModalButton {
+        width: 65%;
+        margin-top: 5vh;
+        font-size: 1.8vw;
+        padding: 2.5vh 2vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .Modal {
+        width: 1017px;
+    }
+    .ModalHeader {
+        margin-top: 51px;
+        font-size: 36px;
+    }
+    .ModalText {
+        font-size: 18px;
+    }
+    .ModalForm {
+        width: 65%;
+    }
+    .ModalInput {
+        padding: 5px 0 10px 20px;
+    }
+    .ModalInput::placeholder {
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .ModalButton {
+        width: 200px;
+        padding: 18px 22px;
+        font-size: 1.5vw;
+        margin-top: 22px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .ModalInput {
+        width: 253px;
+        height: 50px;
+        padding: 5px 0 5px 20px;
+        font-size: 18px;
+    }
+    .ModalInput::placeholder {
+        line-height: 27px;
+    }
+    .ModalText {
+        line-height: 180%;
+    }
+    .ModalButton {
+        font-size: 18px;
+    }
+}

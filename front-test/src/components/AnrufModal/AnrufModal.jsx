@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import  ModalImage from '../../assets/img/popup-img 1.png';
-import { customStyles, 
-  ModalInput, 
-  ModalForm, 
-  ModalHeader, 
-  ModalInfo,
-  ModalText,
-  ModalButton,
-  ModalClose,
-  Image
-   } from './AnrufModal.style'
+import './AnrufModal.style.css';
 
-function AnrufModal() {
+export default function AnrufModal() {
   const [open, setOpen] = useState(true);
  
   const closeModal = () => setOpen(false);
@@ -20,21 +11,20 @@ function AnrufModal() {
     return (
       <Modal 
           isOpen={open}
-          style={customStyles}
+          className="Modal"
+          overlayClassName="Overlay"
             >
-        <Image src={ModalImage} />
-          <ModalInfo>
-              <ModalHeader children="Sed ut perspiciatis" />
-              <ModalText children="Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, ut enim ad minima veniam, quis nostrum exercitationem ullam corporis." />              
-              <ModalForm>
-                <ModalInput type="email" placeholder="deine@email.com" />
-                <ModalInput type="text" placeholder="Name" />
-                <ModalButton type="submit" children="Ja, ich möchte!" />
-              </ModalForm>
-          </ModalInfo>
-          <ModalClose onClick={closeModal} />
+        <img className="ModalImage" src={ModalImage} />
+          <div className="ModalInfo">
+              <span className="ModalHeader" children="Sed ut perspiciatis" />
+              <p className="ModalText" children="Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, ut enim ad minima veniam, quis nostrum exercitationem ullam corporis." />
+              <form className="ModalForm">
+                <input className="ModalInput" type="email" placeholder="deine@email.com" />
+                <input className="ModalInput" type="text" placeholder="Name" />
+                <button className="ModalButton" type="submit" children="Ja, ich möchte!" />
+              </form>
+          </div>
+          <a className="ModalClose" onClick={closeModal} />
       </Modal>
     )
 }
-
-export default AnrufModal;
